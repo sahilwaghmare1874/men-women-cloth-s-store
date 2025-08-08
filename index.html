@@ -1,188 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clothing Store - Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ClothStore — Home</title>
 
+    <!-- Bootstrap CSS & icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">ClothStore</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto me-3">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-      </ul>
-      <form class="d-flex me-3">
-        <input class="form-control me-2" type="search" placeholder="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form>
-      <a href="#" class="btn btn-warning position-relative">
-        <i class="bi bi-cart-fill"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
-      </a>
-    </div>
-  </div>
-</nav>
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">ClothStore</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<!-- HERO CAROUSEL -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://via.placeholder.com/1920x600?text=New+Men+Collection" class="d-block w-100">
-      <div class="carousel-caption d-none d-md-block">
-        <h1>New Men Collection</h1>
-        <p>Shop the latest trends</p>
-        <a href="#" class="btn btn-primary">Shop Now</a>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <form class="d-flex me-3" role="search" onsubmit="return false;">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search products"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+
+          <a
+            class="btn btn-warning position-relative"
+            href="#"
+            aria-label="Cart"
+          >
+            <i class="bi bi-cart-fill"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >3</span
+            >
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/1920x600?text=Women+Fashion" class="d-block w-100">
-      <div class="carousel-caption d-none d-md-block">
-        <h1>Women Fashion</h1>
-        <p>Elegant and stylish</p>
-        <a href="#" class="btn btn-light">Discover More</a>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <header class="container-fluid px-0">
+      <div
+        id="heroCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        aria-label="Hero carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?auto=format&fit=crop&w=1600&q=80"
+              class="d-block w-100 hero-img"
+              alt="New men collection"
+            />
+            <div class="carousel-caption d-none d-md-block hero-caption">
+              <h1>New Men Collection</h1>
+              <p>Shop the latest seasonal trends.</p>
+              <a class="btn btn-primary" href="#">Shop Now</a>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1600&q=80"
+              class="d-block w-100 hero-img"
+              alt="Women fashion"
+            />
+            <div class="carousel-caption d-none d-md-block hero-caption">
+              <h1>Women Fashion</h1>
+              <p>Elegant. Comfortable. Sustainable.</p>
+              <a class="btn btn-light" href="#">Discover</a>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-  </div>
-</div>
+    </header>
 
-<!-- CATEGORIES -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">Shop by Category</h2>
-  <div class="row">
-    <div class="col-md-3 text-center category-card">
-      <img src="https://via.placeholder.com/300x300?text=Men" class="img-fluid rounded">
-      <h5 class="mt-2">Men's Wear</h5>
-    </div>
-    <div class="col-md-3 text-center category-card">
-      <img src="https://via.placeholder.com/300x300?text=Women" class="img-fluid rounded">
-      <h5 class="mt-2">Women's Wear</h5>
-    </div>
-    <div class="col-md-3 text-center category-card">
-      <img src="https://via.placeholder.com/300x300?text=Accessories" class="img-fluid rounded">
-      <h5 class="mt-2">Accessories</h5>
-    </div>
-    <div class="col-md-3 text-center category-card">
-      <img src="https://via.placeholder.com/300x300?text=Sale" class="img-fluid rounded">
-      <h5 class="mt-2">Sale Items</h5>
-    </div>
-  </div>
-</div>
-
-<!-- FEATURED PRODUCTS -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">Featured Products</h2>
-  <div class="row">
-    <div class="col-md-3 product-card">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x400?text=Product+1" class="card-img-top">
-        <div class="card-body text-center">
-          <h6>Blue Shirt</h6>
-          <p>$25.99</p>
-          <a href="#" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+    <!-- SHOP BY CATEGORY: left small cards + right large slider -->
+   <!-- Shop by Category Section -->
+<section class="container my-5">
+  <h2 class="text-center mb-4 fw-bold">Shop by Category</h2>
+  <div class="row g-4">
+    
+    <!-- Category Card -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card category-card text-center h-100">
+        <img src="img/category1.jpg" class="card-img-top" alt="Men's Clothing">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-0">Men's Clothing</h6>
         </div>
       </div>
     </div>
-    <div class="col-md-3 product-card">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x400?text=Product+2" class="card-img-top">
-        <div class="card-body text-center">
-          <h6>Red Dress</h6>
-          <p>$35.50</p>
-          <a href="#" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+
+    <!-- Category Card -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card category-card text-center h-100">
+        <img src="img/category2.jpg" class="card-img-top" alt="Women's Clothing">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-0">Women's Clothing</h6>
         </div>
       </div>
     </div>
-    <div class="col-md-3 product-card">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x400?text=Product+3" class="card-img-top">
-        <div class="card-body text-center">
-          <h6>Leather Jacket</h6>
-          <p>$59.99</p>
-          <a href="#" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+
+    <!-- Category Card -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card category-card text-center h-100">
+        <img src="img/category3.jpg" class="card-img-top" alt="Shoes">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-0">Shoes</h6>
         </div>
       </div>
     </div>
-    <div class="col-md-3 product-card">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x400?text=Product+4" class="card-img-top">
-        <div class="card-body text-center">
-          <h6>Casual Shoes</h6>
-          <p>$45.00</p>
-          <a href="#" class="btn btn-sm btn-outline-primary">Add to Cart</a>
+
+    <!-- Category Card -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card category-card text-center h-100">
+        <img src="img/category4.jpg" class="card-img-top" alt="Accessories">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-0">Accessories</h6>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-<!-- SPECIAL OFFERS -->
-<div class="offer-section text-center">
-  <h2>Special Sale Ends In</h2>
-  <div id="countdown" class="countdown my-3"></div>
-  <a href="#" class="btn btn-danger">Shop Sale</a>
-</div>
-
-<!-- NEWSLETTER -->
-<div class="container my-5">
-  <div class="text-center">
-    <h2>Subscribe to our Newsletter</h2>
-    <p>Get updates about new products and sales</p>
-    <form class="d-flex justify-content-center">
-      <input type="email" class="form-control w-25 me-2" placeholder="Enter email">
-      <button class="btn btn-primary">Subscribe</button>
-    </form>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container text-center">
-    <p>&copy; 2025 ClothStore | All Rights Reserved</p>
-    <div>
-      <a href="#"><i class="bi bi-facebook me-2"></i></a>
-      <a href="#"><i class="bi bi-instagram me-2"></i></a>
-      <a href="#"><i class="bi bi-twitter"></i></a>
+    <!-- Category Card -->
+    <div class="col-6 col-md-4 col-lg-2">
+      <div class="card category-card text-center h-100">
+        <img src="img/category5.jpg" class="card-img-top" alt="Kids Wear">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-0">Kids Wear</h6>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
 
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Countdown Timer
-  function startCountdown(endDate) {
-    const countdownEl = document.getElementById("countdown");
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-      if (distance < 0) {
-        clearInterval(timer);
-        countdownEl.innerHTML = "Sale Ended";
-        return;
+  </div>
+</section>
+
+        <!-- Right: big carousel slider for categories / featured images -->
+        <div class="col-lg-8 order-lg-2" style="align-items: center; text-align: center;">
+          <div class="justify-content-between align-items-center mb-2">
+            <h2 class="h4 mb-0">Featured Collection</h2>
+          </div>
+
+          <div
+            id="categorySlider"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            aria-label="Category slider"
+          >
+            <div class="carousel-inner rounded overflow-hidden shadow-sm">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1600&q=80"
+                  class="d-block w-100 slider-img"
+                  alt="Fashion 1"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?auto=format&fit=crop&w=1600&q=80"
+                  class="d-block w-100 slider-img"
+                  alt="Fashion 2"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=80"
+                  class="d-block w-100 slider-img"
+                  alt="Fashion 3"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?auto=format&fit=crop&w=1600&q=80"
+                  class="d-block w-100 slider-img"
+                  alt="Fashion 4"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1600&q=80"
+                  class="d-block w-100 slider-img"
+                  alt="Fashion 5"
+                />
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#categorySlider"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#categorySlider"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="container my-5">
+      <h2 class="text-center mb-4">Featured Products</h2>
+      <div class="row g-4">
+        <!-- Product card (repeat as needed) -->
+        <div class="col-6 col-md-3">
+          <div class="card product-card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1499971442178-8c10fdf5f6ac?auto=format&fit=crop&w=800&q=80"
+              class="card-img-top product-img"
+              alt="Blue Shirt"
+            />
+            <div class="card-body text-center">
+              <h6 class="card-title mb-1">Blue Shirt</h6>
+              <p class="text-muted mb-2">$25.99</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="card product-card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80"
+              class="card-img-top product-img"
+              alt="Red Dress"
+            />
+            <div class="card-body text-center">
+              <h6 class="card-title mb-1">Red Dress</h6>
+              <p class="text-muted mb-2">$35.50</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="card product-card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1526178617143-0b6bfba6c3e3?auto=format&fit=crop&w=800&q=80"
+              class="card-img-top product-img"
+              alt="Leather Jacket"
+            />
+            <div class="card-body text-center">
+              <h6 class="card-title mb-1">Leather Jacket</h6>
+              <p class="text-muted mb-2">$59.99</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="card product-card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80"
+              class="card-img-top product-img"
+              alt="Casual Shoes"
+            />
+            <div class="card-body text-center">
+              <h6 class="card-title mb-1">Casual Shoes</h6>
+              <p class="text-muted mb-2">$45.00</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIAL OFFERS (COUNTDOWN) -->
+    <section class="offer-section my-5">
+      <div class="container text-center">
+        <h2>Special Sale Ends In</h2>
+        <div id="countdown" class="countdown my-3" aria-live="polite">
+          Loading...
+        </div>
+        <a class="btn btn-danger" href="#">Shop Sale</a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="container my-5">
+      <div class="newsletter p-4 rounded shadow-sm text-center">
+        <h3 class="mb-2">Subscribe to our Newsletter</h3>
+        <p class="text-muted mb-3">Get updates about new products and sales</p>
+        <form
+          class="d-flex justify-content-center"
+          onsubmit="subscribeNewsletter(event)"
+        >
+          <input
+            id="newsletterEmail"
+            type="email"
+            class="form-control w-50 me-2"
+            placeholder="Enter email"
+            required
+          />
+          <button class="btn btn-primary">Subscribe</button>
+        </form>
+        <div
+          id="newsletterMsg"
+          class="mt-3 small text-success"
+          aria-live="polite"
+        ></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container text-center">
+        <p class="mb-1">
+          &copy; <span id="year"></span> ClothStore — All Rights Reserved
+        </p>
+        <div>
+          <a href="#" class="text-warning me-3"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="#" class="text-warning me-3"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="#" class="text-warning"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Set current year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Initialize carousels with custom intervals (safe if elements exist)
+      (function initCarousels() {
+        const heroEl = document.getElementById("heroCarousel");
+        if (heroEl)
+          new bootstrap.Carousel(heroEl, {
+            interval: 5000,
+            ride: "carousel",
+            pause: "hover",
+          });
+
+        const catEl = document.getElementById("categorySlider");
+        if (catEl)
+          new bootstrap.Carousel(catEl, {
+            interval: 3000,
+            ride: "carousel",
+            pause: "hover",
+          });
+      })();
+
+      // Countdown timer (example target date)
+      (function startCountdown() {
+        const countdownEl = document.getElementById("countdown");
+        if (!countdownEl) return;
+        // change the target date as required
+        const target = new Date("August 15, 2025 23:59:59").getTime();
+
+        function update() {
+          const now = Date.now();
+          const distance = target - now;
+          if (distance <= 0) {
+            countdownEl.textContent = "Sale Ended";
+            clearInterval(timer);
+            return;
+          }
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        update();
+        const timer = setInterval(update, 1000);
+      })();
+
+      // Simple newsletter submit handler (client-side only)
+      function subscribeNewsletter(e) {
+        e.preventDefault();
+        const email = document.getElementById("newsletterEmail").value.trim();
+        const msg = document.getElementById("newsletterMsg");
+        if (!email) return;
+        msg.textContent = "Thanks! You are subscribed (demo only).";
+        setTimeout(() => (msg.textContent = ""), 4000);
+        document.getElementById("newsletterEmail").value = "";
       }
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
-  }
-  startCountdown(new Date("Aug 15, 2025 23:59:59").getTime());
-</script>
-</body>
+    </script>
+  </body>
 </html>
-

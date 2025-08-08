@@ -1,0 +1,33 @@
+ body {
+      font-family: Arial, sans-serif;
+    }
+    .category-card img {
+      transition: 0.3s;
+    }
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      transition: 0.3s;
+    }
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+    .offer-section {
+      background: #f8f9fa;
+      padding: 50px 0;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #dc3545;
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
